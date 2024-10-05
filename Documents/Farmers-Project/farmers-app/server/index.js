@@ -16,7 +16,6 @@ const port = 3100;
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
 app.post("/Login", async (req, res) => {
   const data = req.body;
   const gmail = data.gmail;
