@@ -1,7 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
-import OpenAI from "openai";
 import { MongoClient } from "mongodb";
 import SignUp from "./models/SignUp.js";
 import mongoose from "mongoose";
