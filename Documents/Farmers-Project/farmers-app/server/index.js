@@ -11,15 +11,12 @@ import FetchItems from "./models/ItemsFetch.js";
 import { WebSocketServer } from "ws";
 const url = "mongodb://localhost:27017/";
 const client = new MongoClient(url);
-const openai = new OpenAI({apiKey: "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"});
-
 const app = express();
 const port = 3100;
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// mongoose.connect(`mongodb://localhost:27017/`, {});
 app.post("/Login", async (req, res) => {
   const data = req.body;
   const gmail = data.gmail;
@@ -184,20 +181,8 @@ wss.on("connection", (ws) => {
     console.log(`Message received: ${message}`);
     ws.send(`Good to see you client`);
   });
-
-  // ws.on("close", () => {
-  //   console.log("Client disconnected");
-  // });
+  
 });
 
-// const completion = await openai.chat.completions.create({
-//     model: "gpt-4o-mini",
-//     messages: [
-//         { role: "system", content: "You are a helpful assistant." },
-//         {
-//             role: "user",
-//             content: "Write a haiku about recursion in programming.",
-//         },
-//     ],
-// });
+
 
