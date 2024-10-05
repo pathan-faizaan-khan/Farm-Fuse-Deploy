@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+li {
+    cursor: pointer;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+nextjs-portal {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+
+.transition {
+    position: relative;
+    width: 95.3vw;
+    height: 95vh;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 4s ease-out forwards;
+    
+  
+}
+
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    50%, 100% { opacity: 1; }
+  }
